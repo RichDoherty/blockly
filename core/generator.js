@@ -231,6 +231,40 @@ Generator.prototype.blockToCode = function(block, opt_thisOnly) {
 };
 
 /**
+ * @param {*} innerOrder 
+ * @param {*} outerOrder 
+ * @returns 
+ */
+ Generator.prototype.areParenthesesNeeded = function(innerOrder, outerOrder) {
+  let parensNeeded = false;
+  const outerOrderClass = Math.floor(outerOrder);
+  const innerOrderClass = Math.floor(innerOrder);
+  if (outerOrderClass <= innerOrderClass) {
+    if (outerOrderClass === innerOrderClass &&
+        (outerOrderClass === 0 || outerOrderClass === 99)) {
+      // Don't generate parens around NONE-NONE and ATOMIC-ATOMIC pairs.
+      // 0 is the atomic order, 99 is the none order.  No parentheses needed.
+      // In all known languages multiple such code blocks are not order
+      // sensitive.  In fact in Python ('a' 'b') 'c' would fail.
+    } else {
+      // The operators outside this code are stronger than the operators
+      // inside this code.  To prevent the code from being pulled apart,
+      // wrap the code in parentheses.
+      parensNeeded = true;
+      // Check for special exceptions.
+      for (let i = 0; i < this.ORDER_OVERRIDES.length; i++) {
+        if (this.ORDER_OVERRIDES[i][0] === outerOrder &&
+            this.ORDER_OVERRIDES[i][1] === innerOrder) {
+          parensNeeded = false;
+          break;
+        }
+      }
+    }
+  }
+  return parensNeeded;
+};
+
+/**
  * Generate code representing the specified value input.
  * @param {!Block} block The block containing the input.
  * @param {string} name The name of the input.
@@ -266,34 +300,7 @@ Generator.prototype.valueToCode = function(block, name, outerOrder) {
   if (!code) {
     return '';
   }
-
-  // Add parentheses if needed.
-  let parensNeeded = false;
-  const outerOrderClass = Math.floor(outerOrder);
-  const innerOrderClass = Math.floor(innerOrder);
-  if (outerOrderClass <= innerOrderClass) {
-    if (outerOrderClass === innerOrderClass &&
-        (outerOrderClass === 0 || outerOrderClass === 99)) {
-      // Don't generate parens around NONE-NONE and ATOMIC-ATOMIC pairs.
-      // 0 is the atomic order, 99 is the none order.  No parentheses needed.
-      // In all known languages multiple such code blocks are not order
-      // sensitive.  In fact in Python ('a' 'b') 'c' would fail.
-    } else {
-      // The operators outside this code are stronger than the operators
-      // inside this code.  To prevent the code from being pulled apart,
-      // wrap the code in parentheses.
-      parensNeeded = true;
-      // Check for special exceptions.
-      for (let i = 0; i < this.ORDER_OVERRIDES.length; i++) {
-        if (this.ORDER_OVERRIDES[i][0] === outerOrder &&
-            this.ORDER_OVERRIDES[i][1] === innerOrder) {
-          parensNeeded = false;
-          break;
-        }
-      }
-    }
-  }
-  if (parensNeeded) {
+  if (this.areParenthesesNeeded(innerOrder, outerOrder)) {
     // Technically, this should be handled on a language-by-language basis.
     // However all known (sane) languages use parentheses for grouping.
     code = '(' + code + ')';

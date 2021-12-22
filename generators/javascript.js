@@ -314,7 +314,7 @@ JavaScript.getAdjusted = function(
     }
     innerOrder = Math.floor(innerOrder);
     order = Math.floor(order);
-    if (innerOrder && order >= innerOrder) {
+    if (innerOrder && order <= innerOrder) {
       at = '(' + at + ')';
     }
   }
