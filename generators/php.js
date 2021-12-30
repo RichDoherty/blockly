@@ -294,7 +294,7 @@ PHP.getAdjusted = function(block, atId, opt_delta, opt_negate, opt_order) {
     }
     innerOrder = Math.floor(innerOrder);
     order = Math.floor(order);
-    if (innerOrder && order >= innerOrder) {
+    if (this.areParenthesesNeeded(innerOrder, order)) {
       at = '(' + at + ')';
     }
   }

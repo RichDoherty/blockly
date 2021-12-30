@@ -294,7 +294,7 @@ Dart.getAdjusted = function(block, atId, opt_delta, opt_negate,
     }
     innerOrder = Math.floor(innerOrder);
     order = Math.floor(order);
-    if (innerOrder && order >= innerOrder) {
+    if (this.areParenthesesNeeded(innerOrder, order)) {
       at = '(' + at + ')';
     }
   }
