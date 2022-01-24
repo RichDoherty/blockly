@@ -1,4 +1,10 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="!PG+fJW#MLN,g2RGd|,T">test name</variable>
+    <variable id="qXpMgh3hjk2yc|mt+uU_">item</variable>
+    <variable id="*4vnwd*0:%AKrtn3(L6i">text</variable>
+    <variable id="^YpVb*~$GT:O5Mlp+SpW">number of calls</variable>
+  </variables>
   <block type="unittest_main" x="13" y="13">
     <field name="SUITE_NAME">Text</field>
     <statement name="DO">
@@ -84,13 +90,13 @@
   </block>
   <block type="procedures_defnoreturn" x="13" y="488">
     <mutation>
-      <arg name="test name"></arg>
+      <arg name="test name" varid="!PG+fJW#MLN,g2RGd|,T"></arg>
     </mutation>
     <field name="NAME">check number of calls</field>
     <comment pinned="false" h="69" w="256">Checks that the number of calls is one in order to confirm that a function was only called once.</comment>
     <statement name="STACK">
       <block type="text_append">
-        <field name="VAR">test name</field>
+        <field name="VAR" id="!PG+fJW#MLN,g2RGd|,T">test name</field>
         <value name="TEXT">
           <block type="text">
             <field name="TEXT">number of calls</field>
@@ -100,12 +106,12 @@
           <block type="unittest_assertequals">
             <value name="MESSAGE">
               <block type="variables_get">
-                <field name="VAR">test name</field>
+                <field name="VAR" id="!PG+fJW#MLN,g2RGd|,T">test name</field>
               </block>
             </value>
             <value name="ACTUAL">
               <block type="variables_get">
-                <field name="VAR">number of calls</field>
+                <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
               </block>
             </value>
             <value name="EXPECTED">
@@ -519,7 +525,7 @@
     <comment pinned="false" h="80" w="160">Tests the "append text" block with different types of parameters.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">item</field>
+        <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">Miserable</field>
@@ -527,7 +533,7 @@
         </value>
         <next>
           <block type="text_append" inline="false">
-            <field name="VAR">item</field>
+            <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
             <value name="TEXT">
               <block type="text">
                 <field name="TEXT">Failure</field>
@@ -542,7 +548,7 @@
                 </value>
                 <value name="ACTUAL">
                   <block type="variables_get">
-                    <field name="VAR">item</field>
+                    <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
                   </block>
                 </value>
                 <value name="EXPECTED">
@@ -552,7 +558,7 @@
                 </value>
                 <next>
                   <block type="variables_set" inline="false">
-                    <field name="VAR">item</field>
+                    <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
                     <value name="VALUE">
                       <block type="math_number">
                         <field name="NUM">12</field>
@@ -560,7 +566,7 @@
                     </value>
                     <next>
                       <block type="text_append" inline="false">
-                        <field name="VAR">item</field>
+                        <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
                         <value name="TEXT">
                           <block type="math_number">
                             <field name="NUM">34</field>
@@ -575,7 +581,7 @@
                             </value>
                             <value name="ACTUAL">
                               <block type="variables_get">
-                                <field name="VAR">item</field>
+                                <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
                               </block>
                             </value>
                             <value name="EXPECTED">
@@ -585,7 +591,7 @@
                             </value>
                             <next>
                               <block type="variables_set" inline="false">
-                                <field name="VAR">item</field>
+                                <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
                                 <value name="VALUE">
                                   <block type="text">
                                     <field name="TEXT">Something </field>
@@ -593,7 +599,7 @@
                                 </value>
                                 <next>
                                   <block type="text_append" inline="false">
-                                    <field name="VAR">item</field>
+                                    <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
                                     <value name="TEXT">
                                       <block type="logic_ternary" inline="true">
                                         <value name="IF">
@@ -620,7 +626,7 @@
                                         </value>
                                         <value name="ACTUAL">
                                           <block type="variables_get">
-                                            <field name="VAR">item</field>
+                                            <field name="VAR" id="qXpMgh3hjk2yc|mt+uU_">item</field>
                                           </block>
                                         </value>
                                         <value name="EXPECTED">
@@ -652,7 +658,7 @@
     <comment pinned="false" h="80" w="160">Tests the "find" block with a variable.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">text</field>
+        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">Banana</field>
@@ -670,7 +676,7 @@
                 <field name="END">FIRST</field>
                 <value name="VALUE">
                   <block type="variables_get">
-                    <field name="VAR">text</field>
+                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                   </block>
                 </value>
                 <value name="FIND">
@@ -701,7 +707,7 @@
                     <field name="END">LAST</field>
                     <value name="VALUE">
                       <block type="variables_get">
-                        <field name="VAR">text</field>
+                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                       </block>
                     </value>
                     <value name="FIND">
@@ -732,7 +738,7 @@
                         <field name="END">FIRST</field>
                         <value name="VALUE">
                           <block type="variables_get">
-                            <field name="VAR">text</field>
+                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                           </block>
                         </value>
                         <value name="FIND">
@@ -765,7 +771,7 @@
     <comment pinned="false" h="80" w="160">Creates a string for use with the find test.</comment>
     <statement name="STACK">
       <block type="math_change">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
         <value name="DELTA">
           <block type="math_number">
             <field name="NUM">1</field>
@@ -784,7 +790,7 @@
     <comment pinned="false" h="80" w="160">Tests the "find" block with a function call.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
         <value name="VALUE">
           <block type="math_number">
             <field name="NUM">0</field>
@@ -833,7 +839,7 @@
                 </value>
                 <next>
                   <block type="variables_set">
-                    <field name="VAR">number of calls</field>
+                    <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                     <value name="VALUE">
                       <block type="math_number">
                         <field name="NUM">0</field>
@@ -894,7 +900,7 @@
                             </value>
                             <next>
                               <block type="variables_set">
-                                <field name="VAR">number of calls</field>
+                                <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                 <value name="VALUE">
                                   <block type="math_number">
                                     <field name="NUM">0</field>
@@ -943,7 +949,7 @@
                                         </value>
                                         <next>
                                           <block type="variables_set">
-                                            <field name="VAR">number of calls</field>
+                                            <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                             <value name="VALUE">
                                               <block type="math_number">
                                                 <field name="NUM">0</field>
@@ -1004,7 +1010,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="variables_set">
-                                                        <field name="VAR">number of calls</field>
+                                                        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                         <value name="VALUE">
                                                           <block type="math_number">
                                                             <field name="NUM">0</field>
@@ -1053,7 +1059,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="variables_set">
-                                                                    <field name="VAR">number of calls</field>
+                                                                    <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                     <value name="VALUE">
                                                                       <block type="math_number">
                                                                         <field name="NUM">0</field>
@@ -1154,7 +1160,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get letter" block with a variable.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">text</field>
+        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">Blockly</field>
@@ -1173,7 +1179,7 @@
                 <field name="WHERE">FIRST</field>
                 <value name="VALUE">
                   <block type="variables_get">
-                    <field name="VAR">text</field>
+                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                   </block>
                 </value>
               </block>
@@ -1196,7 +1202,7 @@
                     <field name="WHERE">LAST</field>
                     <value name="VALUE">
                       <block type="variables_get">
-                        <field name="VAR">text</field>
+                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                       </block>
                     </value>
                   </block>
@@ -1222,7 +1228,7 @@
                             <field name="END">FIRST</field>
                             <value name="VALUE">
                               <block type="variables_get">
-                                <field name="VAR">text</field>
+                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                               </block>
                             </value>
                             <value name="FIND">
@@ -1231,7 +1237,7 @@
                                 <field name="WHERE">RANDOM</field>
                                 <value name="VALUE">
                                   <block type="variables_get">
-                                    <field name="VAR">text</field>
+                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                   </block>
                                 </value>
                               </block>
@@ -1262,7 +1268,7 @@
                             <field name="WHERE">FROM_START</field>
                             <value name="VALUE">
                               <block type="variables_get">
-                                <field name="VAR">text</field>
+                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                               </block>
                             </value>
                             <value name="AT">
@@ -1285,7 +1291,7 @@
                           <block type="unittest_assertequals" inline="false">
                             <value name="MESSAGE">
                               <block type="text">
-                                <field name="TEXT">get # order simple</field>
+                                <field name="TEXT">get # simple with arithmetic block</field>
                               </block>
                             </value>
                             <value name="ACTUAL">
@@ -1294,27 +1300,25 @@
                                 <field name="WHERE">FROM_START</field>
                                 <value name="VALUE">
                                   <block type="variables_get">
-                                    <field name="VAR">text</field>
+                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                   </block>
                                 </value>
                                 <value name="AT">
-                                  <block type="logic_ternary">
-                                    <value name="IF">
-                                      <block type="logic_boolean">
-                                        <field name="BOOL">TRUE</field>
-                                      </block>
-                                    </value>
-                                    <value name="THEN">
-                                      <block type="unittest_adjustindex">
-                                        <value name="INDEX">
+                                  <block type="unittest_adjustindex">
+                                    <value name="INDEX">
+                                      <block type="math_arithmetic">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
                                           <block type="math_number">
-                                            <field name="NUM">2</field>
+                                            <field name="NUM">1</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number">
+                                            <field name="NUM">1</field>
                                           </block>
                                         </value>
                                       </block>
-                                    </value>
-                                    <value name="ELSE">
-                                      <block type="logic_null"></block>
                                     </value>
                                   </block>
                                 </value>
@@ -1329,24 +1333,36 @@
                               <block type="unittest_assertequals" inline="false">
                                 <value name="MESSAGE">
                                   <block type="text">
-                                    <field name="TEXT">get #-end simple</field>
+                                    <field name="TEXT">get # order simple</field>
                                   </block>
                                 </value>
                                 <value name="ACTUAL">
                                   <block type="text_charAt">
                                     <mutation at="true"></mutation>
-                                    <field name="WHERE">FROM_END</field>
+                                    <field name="WHERE">FROM_START</field>
                                     <value name="VALUE">
                                       <block type="variables_get">
-                                        <field name="VAR">text</field>
+                                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                       </block>
                                     </value>
                                     <value name="AT">
-                                      <block type="unittest_adjustindex">
-                                        <value name="INDEX">
-                                          <block type="math_number">
-                                            <field name="NUM">2</field>
+                                      <block type="logic_ternary">
+                                        <value name="IF">
+                                          <block type="logic_boolean">
+                                            <field name="BOOL">TRUE</field>
                                           </block>
+                                        </value>
+                                        <value name="THEN">
+                                          <block type="unittest_adjustindex">
+                                            <value name="INDEX">
+                                              <block type="math_number">
+                                                <field name="NUM">2</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="ELSE">
+                                          <block type="logic_null"></block>
                                         </value>
                                       </block>
                                     </value>
@@ -1354,41 +1370,30 @@
                                 </value>
                                 <value name="EXPECTED">
                                   <block type="text">
-                                    <field name="TEXT">k</field>
+                                    <field name="TEXT">o</field>
                                   </block>
                                 </value>
                                 <next>
                                   <block type="unittest_assertequals" inline="false">
                                     <value name="MESSAGE">
                                       <block type="text">
-                                        <field name="TEXT">get #-end order simple</field>
+                                        <field name="TEXT">get #-end simple</field>
                                       </block>
                                     </value>
                                     <value name="ACTUAL">
                                       <block type="text_charAt">
                                         <mutation at="true"></mutation>
                                         <field name="WHERE">FROM_END</field>
-                                        <comment pinned="false" h="84" w="274">The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.</comment>
                                         <value name="VALUE">
                                           <block type="variables_get">
-                                            <field name="VAR">text</field>
+                                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                           </block>
                                         </value>
                                         <value name="AT">
-                                          <block type="math_arithmetic">
-                                            <field name="OP">ADD</field>
-                                            <value name="A">
+                                          <block type="unittest_adjustindex">
+                                            <value name="INDEX">
                                               <block type="math_number">
-                                                <field name="NUM">0</field>
-                                              </block>
-                                            </value>
-                                            <value name="B">
-                                              <block type="unittest_adjustindex">
-                                                <value name="INDEX">
-                                                  <block type="math_number">
-                                                    <field name="NUM">2</field>
-                                                  </block>
-                                                </value>
+                                                <field name="NUM">2</field>
                                               </block>
                                             </value>
                                           </block>
@@ -1400,6 +1405,51 @@
                                         <field name="TEXT">k</field>
                                       </block>
                                     </value>
+                                    <next>
+                                      <block type="unittest_assertequals" inline="false">
+                                        <value name="MESSAGE">
+                                          <block type="text">
+                                            <field name="TEXT">get #-end order simple</field>
+                                          </block>
+                                        </value>
+                                        <value name="ACTUAL">
+                                          <block type="text_charAt">
+                                            <mutation at="true"></mutation>
+                                            <field name="WHERE">FROM_END</field>
+                                            <comment pinned="false" h="84" w="274">The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.</comment>
+                                            <value name="VALUE">
+                                              <block type="variables_get">
+                                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
+                                              </block>
+                                            </value>
+                                            <value name="AT">
+                                              <block type="math_arithmetic">
+                                                <field name="OP">ADD</field>
+                                                <value name="A">
+                                                  <block type="math_number">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="unittest_adjustindex">
+                                                    <value name="INDEX">
+                                                      <block type="math_number">
+                                                        <field name="NUM">2</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="EXPECTED">
+                                          <block type="text">
+                                            <field name="TEXT">k</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
@@ -1422,7 +1472,7 @@
     <comment pinned="false" h="80" w="160">Creates a string for use with the get test.</comment>
     <statement name="STACK">
       <block type="math_change">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
         <value name="DELTA">
           <block type="math_number">
             <field name="NUM">1</field>
@@ -1441,7 +1491,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get letter" block with a function call.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">text</field>
+        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">Blockly</field>
@@ -1449,7 +1499,7 @@
         </value>
         <next>
           <block type="variables_set">
-            <field name="VAR">number of calls</field>
+            <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
             <value name="VALUE">
               <block type="math_number">
                 <field name="NUM">0</field>
@@ -1490,7 +1540,7 @@
                     </value>
                     <next>
                       <block type="variables_set">
-                        <field name="VAR">number of calls</field>
+                        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                         <value name="VALUE">
                           <block type="math_number">
                             <field name="NUM">0</field>
@@ -1543,7 +1593,7 @@
                                 </value>
                                 <next>
                                   <block type="variables_set">
-                                    <field name="VAR">number of calls</field>
+                                    <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                     <value name="VALUE">
                                       <block type="math_number">
                                         <field name="NUM">0</field>
@@ -1584,7 +1634,7 @@
                                             </value>
                                             <next>
                                               <block type="variables_set">
-                                                <field name="VAR">number of calls</field>
+                                                <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                 <value name="VALUE">
                                                   <block type="math_number">
                                                     <field name="NUM">0</field>
@@ -1637,7 +1687,7 @@
                                                         </value>
                                                         <next>
                                                           <block type="variables_set">
-                                                            <field name="VAR">number of calls</field>
+                                                            <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                             <value name="VALUE">
                                                               <block type="math_number">
                                                                 <field name="NUM">0</field>
@@ -1659,7 +1709,7 @@
                                                                         <field name="END">FIRST</field>
                                                                         <value name="VALUE">
                                                                           <block type="variables_get">
-                                                                            <field name="VAR">text</field>
+                                                                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                                           </block>
                                                                         </value>
                                                                         <value name="FIND">
@@ -1698,7 +1748,7 @@
                                                                     </value>
                                                                     <next>
                                                                       <block type="variables_set">
-                                                                        <field name="VAR">number of calls</field>
+                                                                        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                         <value name="VALUE">
                                                                           <block type="math_number">
                                                                             <field name="NUM">0</field>
@@ -1720,7 +1770,7 @@
                                                                                     <field name="END">FIRST</field>
                                                                                     <value name="VALUE">
                                                                                       <block type="variables_get">
-                                                                                        <field name="VAR">text</field>
+                                                                                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <value name="FIND">
@@ -1771,7 +1821,7 @@
                                                                                 </value>
                                                                                 <next>
                                                                                   <block type="variables_set">
-                                                                                    <field name="VAR">number of calls</field>
+                                                                                    <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                     <value name="VALUE">
                                                                                       <block type="math_number">
                                                                                         <field name="NUM">0</field>
@@ -1821,7 +1871,7 @@
                                                                                             </value>
                                                                                             <next>
                                                                                               <block type="variables_set">
-                                                                                                <field name="VAR">number of calls</field>
+                                                                                                <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                 <value name="VALUE">
                                                                                                   <block type="math_number">
                                                                                                     <field name="NUM">0</field>
@@ -1895,7 +1945,7 @@
                                                                                                         </value>
                                                                                                         <next>
                                                                                                           <block type="variables_set">
-                                                                                                            <field name="VAR">number of calls</field>
+                                                                                                            <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                             <value name="VALUE">
                                                                                                               <block type="math_number">
                                                                                                                 <field name="NUM">0</field>
@@ -1945,7 +1995,7 @@
                                                                                                                     </value>
                                                                                                                     <next>
                                                                                                                       <block type="variables_set">
-                                                                                                                        <field name="VAR">number of calls</field>
+                                                                                                                        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                                         <value name="VALUE">
                                                                                                                           <block type="math_number">
                                                                                                                             <field name="NUM">0</field>
@@ -2084,7 +2134,7 @@
     <comment pinned="false" h="80" w="160">Creates a string for use with the substring test.</comment>
     <statement name="STACK">
       <block type="math_change">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
         <value name="DELTA">
           <block type="math_number">
             <field name="NUM">1</field>
@@ -2103,7 +2153,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get substring" block with a variable.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">text</field>
+        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">123456789</field>
@@ -2123,7 +2173,7 @@
                 <field name="WHERE2">FROM_START</field>
                 <value name="STRING">
                   <block type="variables_get">
-                    <field name="VAR">text</field>
+                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                   </block>
                 </value>
                 <value name="AT1">
@@ -2165,7 +2215,7 @@
                     <field name="WHERE2">FROM_START</field>
                     <value name="STRING">
                       <block type="variables_get">
-                        <field name="VAR">text</field>
+                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                       </block>
                     </value>
                     <value name="AT1">
@@ -2231,7 +2281,7 @@
                         <field name="WHERE2">FROM_END</field>
                         <value name="STRING">
                           <block type="variables_get">
-                            <field name="VAR">text</field>
+                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                           </block>
                         </value>
                         <value name="AT1">
@@ -2274,7 +2324,7 @@
                             <comment pinned="false" h="81" w="266">The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.</comment>
                             <value name="STRING">
                               <block type="variables_get">
-                                <field name="VAR">text</field>
+                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                               </block>
                             </value>
                             <value name="AT1">
@@ -2336,14 +2386,14 @@
                                 <field name="WHERE2">LAST</field>
                                 <value name="STRING">
                                   <block type="variables_get">
-                                    <field name="VAR">text</field>
+                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
                             <value name="EXPECTED">
                               <block type="variables_get">
-                                <field name="VAR">text</field>
+                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                               </block>
                             </value>
                             <next>
@@ -2360,7 +2410,7 @@
                                     <field name="WHERE2">FROM_END</field>
                                     <value name="STRING">
                                       <block type="variables_get">
-                                        <field name="VAR">text</field>
+                                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                       </block>
                                     </value>
                                     <value name="AT1">
@@ -2402,7 +2452,7 @@
                                         <field name="WHERE2">FROM_START</field>
                                         <value name="STRING">
                                           <block type="variables_get">
-                                            <field name="VAR">text</field>
+                                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                           </block>
                                         </value>
                                         <value name="AT1">
@@ -2444,7 +2494,7 @@
                                             <field name="WHERE2">FROM_START</field>
                                             <value name="STRING">
                                               <block type="variables_get">
-                                                <field name="VAR">text</field>
+                                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                               </block>
                                             </value>
                                             <value name="AT2">
@@ -2477,7 +2527,7 @@
                                                 <field name="WHERE2">FROM_END</field>
                                                 <value name="STRING">
                                                   <block type="variables_get">
-                                                    <field name="VAR">text</field>
+                                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                   </block>
                                                 </value>
                                                 <value name="AT2">
@@ -2510,7 +2560,7 @@
                                                     <field name="WHERE2">LAST</field>
                                                     <value name="STRING">
                                                       <block type="variables_get">
-                                                        <field name="VAR">text</field>
+                                                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                       </block>
                                                     </value>
                                                     <value name="AT1">
@@ -2543,7 +2593,7 @@
                                                         <field name="WHERE2">LAST</field>
                                                         <value name="STRING">
                                                           <block type="variables_get">
-                                                            <field name="VAR">text</field>
+                                                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                           </block>
                                                         </value>
                                                         <value name="AT1">
@@ -2576,7 +2626,7 @@
                                                             <field name="WHERE2">FROM_END</field>
                                                             <value name="STRING">
                                                               <block type="variables_get">
-                                                                <field name="VAR">text</field>
+                                                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                               </block>
                                                             </value>
                                                             <value name="AT1">
@@ -2618,7 +2668,7 @@
                                                                 <field name="WHERE2">FROM_START</field>
                                                                 <value name="STRING">
                                                                   <block type="variables_get">
-                                                                    <field name="VAR">text</field>
+                                                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                                   </block>
                                                                 </value>
                                                                 <value name="AT1">
@@ -2661,7 +2711,7 @@
                                                                     <comment pinned="false" h="94" w="320">Checks that the whole string is properly retrieved even if the value for start and end is not a simple number. This is especially important in generators where substring uses [x:length - y] for # #-end.</comment>
                                                                     <value name="STRING">
                                                                       <block type="variables_get">
-                                                                        <field name="VAR">text</field>
+                                                                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                                       </block>
                                                                     </value>
                                                                     <value name="AT1">
@@ -2745,7 +2795,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get substring" block with a function call.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
         <value name="VALUE">
           <block type="math_number">
             <field name="NUM">0</field>
@@ -2805,7 +2855,7 @@
                 </value>
                 <next>
                   <block type="variables_set">
-                    <field name="VAR">number of calls</field>
+                    <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                     <value name="VALUE">
                       <block type="math_number">
                         <field name="NUM">0</field>
@@ -2901,7 +2951,7 @@
                             </value>
                             <next>
                               <block type="variables_set">
-                                <field name="VAR">number of calls</field>
+                                <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                 <value name="VALUE">
                                   <block type="math_number">
                                     <field name="NUM">0</field>
@@ -2962,7 +3012,7 @@
                                         </value>
                                         <next>
                                           <block type="variables_set">
-                                            <field name="VAR">number of calls</field>
+                                            <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                             <value name="VALUE">
                                               <block type="math_number">
                                                 <field name="NUM">0</field>
@@ -3054,7 +3104,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="variables_set">
-                                                        <field name="VAR">number of calls</field>
+                                                        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                         <value name="VALUE">
                                                           <block type="math_number">
                                                             <field name="NUM">0</field>
@@ -3081,7 +3131,7 @@
                                                             </value>
                                                             <value name="EXPECTED">
                                                               <block type="variables_get">
-                                                                <field name="VAR">text</field>
+                                                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                               </block>
                                                             </value>
                                                             <next>
@@ -3096,7 +3146,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="variables_set">
-                                                                    <field name="VAR">number of calls</field>
+                                                                    <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                     <value name="VALUE">
                                                                       <block type="math_number">
                                                                         <field name="NUM">0</field>
@@ -3156,7 +3206,7 @@
                                                                             </value>
                                                                             <next>
                                                                               <block type="variables_set">
-                                                                                <field name="VAR">number of calls</field>
+                                                                                <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                 <value name="VALUE">
                                                                                   <block type="math_number">
                                                                                     <field name="NUM">0</field>
@@ -3216,7 +3266,7 @@
                                                                                         </value>
                                                                                         <next>
                                                                                           <block type="variables_set">
-                                                                                            <field name="VAR">number of calls</field>
+                                                                                            <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                             <value name="VALUE">
                                                                                               <block type="math_number">
                                                                                                 <field name="NUM">0</field>
@@ -3267,7 +3317,7 @@
                                                                                                     </value>
                                                                                                     <next>
                                                                                                       <block type="variables_set">
-                                                                                                        <field name="VAR">number of calls</field>
+                                                                                                        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                         <value name="VALUE">
                                                                                                           <block type="math_number">
                                                                                                             <field name="NUM">0</field>
@@ -3318,7 +3368,7 @@
                                                                                                                 </value>
                                                                                                                 <next>
                                                                                                                   <block type="variables_set">
-                                                                                                                    <field name="VAR">number of calls</field>
+                                                                                                                    <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                                     <value name="VALUE">
                                                                                                                       <block type="math_number">
                                                                                                                         <field name="NUM">0</field>
@@ -3369,7 +3419,7 @@
                                                                                                                             </value>
                                                                                                                             <next>
                                                                                                                               <block type="variables_set">
-                                                                                                                                <field name="VAR">number of calls</field>
+                                                                                                                                <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                                                 <value name="VALUE">
                                                                                                                                   <block type="math_number">
                                                                                                                                     <field name="NUM">0</field>
@@ -3420,7 +3470,7 @@
                                                                                                                                         </value>
                                                                                                                                         <next>
                                                                                                                                           <block type="variables_set">
-                                                                                                                                            <field name="VAR">number of calls</field>
+                                                                                                                                            <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                                                             <value name="VALUE">
                                                                                                                                               <block type="math_number">
                                                                                                                                                 <field name="NUM">0</field>
@@ -3480,7 +3530,7 @@
                                                                                                                                                     </value>
                                                                                                                                                     <next>
                                                                                                                                                       <block type="variables_set">
-                                                                                                                                                        <field name="VAR">number of calls</field>
+                                                                                                                                                        <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                                                                         <value name="VALUE">
                                                                                                                                                           <block type="math_number">
                                                                                                                                                             <field name="NUM">0</field>
@@ -3540,7 +3590,7 @@
                                                                                                                                                                 </value>
                                                                                                                                                                 <next>
                                                                                                                                                                   <block type="variables_set">
-                                                                                                                                                                    <field name="VAR">number of calls</field>
+                                                                                                                                                                    <field name="VAR" id="^YpVb*~$GT:O5Mlp+SpW">number of calls</field>
                                                                                                                                                                     <value name="VALUE">
                                                                                                                                                                       <block type="math_number">
                                                                                                                                                                         <field name="NUM">0</field>
@@ -3709,7 +3759,7 @@
     <comment pinned="false" h="80" w="160">Tests the "change casing" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">text</field>
+        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">Hello World</field>
@@ -3727,7 +3777,7 @@
                 <field name="CASE">UPPERCASE</field>
                 <value name="TEXT">
                   <block type="variables_get">
-                    <field name="VAR">text</field>
+                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                   </block>
                 </value>
               </block>
@@ -3756,7 +3806,7 @@
                         </value>
                         <value name="THEN">
                           <block type="variables_get">
-                            <field name="VAR">text</field>
+                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                           </block>
                         </value>
                         <value name="ELSE">
@@ -3773,7 +3823,7 @@
                 </value>
                 <next>
                   <block type="variables_set">
-                    <field name="VAR">text</field>
+                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                     <value name="VALUE">
                       <block type="text">
                         <field name="TEXT">Hello World</field>
@@ -3791,7 +3841,7 @@
                             <field name="CASE">LOWERCASE</field>
                             <value name="TEXT">
                               <block type="variables_get">
-                                <field name="VAR">text</field>
+                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                               </block>
                             </value>
                           </block>
@@ -3820,7 +3870,7 @@
                                     </value>
                                     <value name="THEN">
                                       <block type="variables_get">
-                                        <field name="VAR">text</field>
+                                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                       </block>
                                     </value>
                                     <value name="ELSE">
@@ -3837,7 +3887,7 @@
                             </value>
                             <next>
                               <block type="variables_set">
-                                <field name="VAR">text</field>
+                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                 <value name="VALUE">
                                   <block type="text">
                                     <field name="TEXT">heLLo WorlD</field>
@@ -3855,7 +3905,7 @@
                                         <field name="CASE">TITLECASE</field>
                                         <value name="TEXT">
                                           <block type="variables_get">
-                                            <field name="VAR">text</field>
+                                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                           </block>
                                         </value>
                                       </block>
@@ -3884,7 +3934,7 @@
                                                 </value>
                                                 <value name="THEN">
                                                   <block type="variables_get">
-                                                    <field name="VAR">text</field>
+                                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                                   </block>
                                                 </value>
                                                 <value name="ELSE">
@@ -3923,7 +3973,7 @@
     <comment pinned="false" h="80" w="160">Tests the "trim" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">text</field>
+        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">   abc def   </field>
@@ -3941,7 +3991,7 @@
                 <field name="MODE">BOTH</field>
                 <value name="TEXT">
                   <block type="variables_get">
-                    <field name="VAR">text</field>
+                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                   </block>
                 </value>
               </block>
@@ -3970,7 +4020,7 @@
                         </value>
                         <value name="THEN">
                           <block type="variables_get">
-                            <field name="VAR">text</field>
+                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                           </block>
                         </value>
                         <value name="ELSE">
@@ -3997,7 +4047,7 @@
                         <field name="MODE">LEFT</field>
                         <value name="TEXT">
                           <block type="variables_get">
-                            <field name="VAR">text</field>
+                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                           </block>
                         </value>
                       </block>
@@ -4026,7 +4076,7 @@
                                 </value>
                                 <value name="THEN">
                                   <block type="variables_get">
-                                    <field name="VAR">text</field>
+                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                   </block>
                                 </value>
                                 <value name="ELSE">
@@ -4053,7 +4103,7 @@
                                 <field name="MODE">RIGHT</field>
                                 <value name="TEXT">
                                   <block type="variables_get">
-                                    <field name="VAR">text</field>
+                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                   </block>
                                 </value>
                               </block>
@@ -4082,7 +4132,7 @@
                                         </value>
                                         <value name="THEN">
                                           <block type="variables_get">
-                                            <field name="VAR">text</field>
+                                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                           </block>
                                         </value>
                                         <value name="ELSE">
@@ -4117,7 +4167,7 @@
     <comment pinned="false" h="80" w="160">Tests the "trim" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">text</field>
+        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">woolloomooloo</field>
@@ -4139,7 +4189,7 @@
                 </value>
                 <value name="TEXT">
                   <block type="variables_get">
-                    <field name="VAR">text</field>
+                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                   </block>
                 </value>
               </block>
@@ -4165,7 +4215,7 @@
                     </value>
                     <value name="TEXT">
                       <block type="variables_get">
-                        <field name="VAR">text</field>
+                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                       </block>
                     </value>
                   </block>
@@ -4191,7 +4241,7 @@
                         </value>
                         <value name="TEXT">
                           <block type="variables_get">
-                            <field name="VAR">text</field>
+                            <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                           </block>
                         </value>
                       </block>
@@ -4217,7 +4267,7 @@
                             </value>
                             <value name="TEXT">
                               <block type="variables_get">
-                                <field name="VAR">text</field>
+                                <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                               </block>
                             </value>
                           </block>
@@ -4243,7 +4293,7 @@
                                 </value>
                                 <value name="TEXT">
                                   <block type="variables_get">
-                                    <field name="VAR">text</field>
+                                    <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                   </block>
                                 </value>
                               </block>
@@ -4269,7 +4319,7 @@
                                     </value>
                                     <value name="TEXT">
                                       <block type="variables_get">
-                                        <field name="VAR">text</field>
+                                        <field name="VAR" id="*4vnwd*0:%AKrtn3(L6i">text</field>
                                       </block>
                                     </value>
                                   </block>
@@ -4699,12 +4749,12 @@
                 </value>
                 <value name="ACTUAL">
                   <block type="text_multiline">
-                    <field name="TEXT">paragraph&#10;with newlines&#10;yup</field>
+                    <field name="TEXT">paragraph&amp;#10;with newlines&amp;#10;yup</field>
                   </block>
                 </value>
                 <value name="EXPECTED">
                   <block type="text_multiline">
-                    <field name="TEXT">paragraph&#10;with newlines&#10;yup</field>
+                    <field name="TEXT">paragraph&amp;#10;with newlines&amp;#10;yup</field>
                   </block>
                 </value>
                 <next>
@@ -4723,7 +4773,7 @@
                         </value>
                         <value name="TEXT">
                           <block type="text_multiline">
-                            <field name="TEXT">bark bark&#10;bark bark bark&#10;bark bark bark bark</field>
+                            <field name="TEXT">bark bark&amp;#10;bark bark bark&amp;#10;bark bark bark bark</field>
                           </block>
                         </value>
                       </block>

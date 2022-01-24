@@ -714,6 +714,7 @@ void test_get_text_simple() {
   unittest_assertequals(text_get_from_end(text, 1), 'y', 'get last simple');
   unittest_assertequals(text.indexOf(text_random_letter(text)) + 1 > 0, true, 'get random simple');
   unittest_assertequals(text[2], 'o', 'get # simple');
+  unittest_assertequals(text[((1 + 1) + 1) - 1], 'o', 'get # simple with arithmetic block');
   unittest_assertequals(text[((true ? 3 : null) - 1)], 'o', 'get # order simple');
   unittest_assertequals(text_get_from_end(text, 3), 'k', 'get #-end simple');
   // The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
@@ -1043,6 +1044,7 @@ void test_get_lists_simple() {
   unittest_assertequals(list[list.length - 3], 'Kirk', 'get #-end simple');
   // The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
   unittest_assertequals(list[list.length - (0 + 3)], 'Kirk', 'get #-end order simple');
+  unittest_assertequals(list[((1 + 1) + 1) - 1], 'McCoy', 'get # with arithmetic block');
 }
 
 dynamic lists_get_from_end(List my_list, num x) {

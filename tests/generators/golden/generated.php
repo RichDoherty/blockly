@@ -691,6 +691,7 @@ function test_get_text_simple() {
   assertEquals(substr($text, -1), 'y', 'get last simple');
   assertEquals(text_indexOf($text, text_random_letter($text)) > 0, true, 'get random simple');
   assertEquals(substr($text, 2, 1), 'o', 'get # simple');
+  assertEquals(substr($text, (1 + 1 + 1) - 1, 1), 'o', 'get # simple with arithmetic block');
   assertEquals(substr($text, ((true ? 3 : null) - 1), 1), 'o', 'get # order simple');
   assertEquals(substr($text, -3, 1), 'k', 'get #-end simple');
   // The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
@@ -1029,6 +1030,7 @@ function test_get_lists_simple() {
   assertEquals(array_slice($list2, -3, 1)[0], 'Kirk', 'get #-end simple');
   // The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
   assertEquals(array_slice($list2, (-(0 + 3)), 1)[0], 'Kirk', 'get #-end order simple');
+  assertEquals($list2[(1 + 1 + 1) - 1], 'McCoy', 'get # with arithmetic block');
 }
 
 // Tests the "get" block with create list call.

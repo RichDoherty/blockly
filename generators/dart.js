@@ -292,8 +292,6 @@ Dart.getAdjusted = function(block, atId, opt_delta, opt_negate,
         at = '-' + at;
       }
     }
-    innerOrder = Math.floor(innerOrder);
-    order = Math.floor(order);
     if (this.areParenthesesNeeded(innerOrder, order)) {
       at = '(' + at + ')';
     }

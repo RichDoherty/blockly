@@ -687,6 +687,7 @@ function test_get_text_simple() {
   assertEquals(text.slice(-1), 'y', 'get last simple');
   assertEquals(text.indexOf(textRandomLetter(text)) + 1 > 0, true, 'get random simple');
   assertEquals(text.charAt(2), 'o', 'get # simple');
+  assertEquals(text.charAt((1 + 1 + 1) - 1), 'o', 'get # simple with arithmetic block');
   assertEquals(text.charAt(((true ? 3 : null) - 1)), 'o', 'get # order simple');
   assertEquals(text.slice(-3).charAt(0), 'k', 'get #-end simple');
   // The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
@@ -1034,6 +1035,7 @@ function test_get_lists_simple() {
   assertEquals(list.slice(-3)[0], 'Kirk', 'get #-end simple');
   // The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
   assertEquals(list.slice((-(0 + 3)))[0], 'Kirk', 'get #-end order simple');
+  assertEquals(list[(1 + 1 + 1) - 1], 'McCoy', 'get # with arithmetic block');
 }
 
 // Tests the "get" block with create list call.

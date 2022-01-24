@@ -775,6 +775,7 @@ function test_get_text_simple()
   assertEquals(string.sub(text, -1, -1), 'y', 'get last simple')
   assertEquals(firstIndexOf(text, text_random_letter(text)) > 0, true, 'get random simple')
   assertEquals(string.sub(text, 3, 3), 'o', 'get # simple')
+  assertEquals(text_char_at(text, (1 + 1) + 1), 'o', 'get # simple with arithmetic block')
   assertEquals(text_char_at(text, true and 3 or nil), 'o', 'get # order simple')
   assertEquals(string.sub(text, -3, -3), 'k', 'get #-end simple')
   -- The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
@@ -1139,6 +1140,7 @@ function test_get_lists_simple()
   assertEquals(list[#list + 1 - 3], 'Kirk', 'get #-end simple')
   -- The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
   assertEquals(list[#list + 1 - (0 + 3)], 'Kirk', 'get #-end order simple')
+  assertEquals(list[(1 + 1) + 1], 'McCoy', 'get # with arithmetic block')
 end
 
 

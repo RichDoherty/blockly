@@ -1,4 +1,12 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="{+:Vtuq9HpM(aRoh+,bc">test name</variable>
+    <variable id="q$-D^CbPaCyUC7?MBQdd">list</variable>
+    <variable id="w~4N]`?dySw.7o+%NhM;">number of calls</variable>
+    <variable id="b2/g_3?r_%b6S_-D1*K4">text</variable>
+    <variable id="dl)LKp.-vUYl8Gp;wRfK">changing list</variable>
+    <variable id="*UbKpjijbrF*38py@1%E">list copy</variable>
+  </variables>
   <block type="unittest_main" x="13" y="13">
     <field name="SUITE_NAME">Lists</field>
     <statement name="DO">
@@ -104,13 +112,13 @@
   </block>
   <block type="procedures_defnoreturn" x="13" y="588">
     <mutation>
-      <arg name="test name"></arg>
+      <arg name="test name" varid="{+:Vtuq9HpM(aRoh+,bc"></arg>
     </mutation>
     <field name="NAME">check number of calls</field>
     <comment pinned="false" h="78" w="257">Checks that the number of calls is one in order to confirm that a function was only called once.</comment>
     <statement name="STACK">
       <block type="text_append">
-        <field name="VAR">test name</field>
+        <field name="VAR" id="{+:Vtuq9HpM(aRoh+,bc">test name</field>
         <value name="TEXT">
           <block type="text">
             <field name="TEXT">number of calls</field>
@@ -120,12 +128,12 @@
           <block type="unittest_assertequals" inline="false">
             <value name="MESSAGE">
               <block type="variables_get">
-                <field name="VAR">test name</field>
+                <field name="VAR" id="{+:Vtuq9HpM(aRoh+,bc">test name</field>
               </block>
             </value>
             <value name="ACTUAL">
               <block type="variables_get">
-                <field name="VAR">number of calls</field>
+                <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
               </block>
             </value>
             <value name="EXPECTED">
@@ -534,7 +542,7 @@
     <comment pinned="false" h="80" w="160">Tests the "find" block with a variable.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="4"></mutation>
@@ -572,7 +580,7 @@
                 <field name="END">FIRST</field>
                 <value name="VALUE">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
                 <value name="FIND">
@@ -603,7 +611,7 @@
                     <field name="END">LAST</field>
                     <value name="VALUE">
                       <block type="variables_get">
-                        <field name="VAR">list</field>
+                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                       </block>
                     </value>
                     <value name="FIND">
@@ -634,7 +642,7 @@
                         <field name="END">FIRST</field>
                         <value name="VALUE">
                           <block type="variables_get">
-                            <field name="VAR">list</field>
+                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                           </block>
                         </value>
                         <value name="FIND">
@@ -667,7 +675,7 @@
     <comment pinned="false" h="80" w="160">Creates a list for use with the find test.</comment>
     <statement name="STACK">
       <block type="math_change">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
         <value name="DELTA">
           <block type="math_number">
             <field name="NUM">1</field>
@@ -706,7 +714,7 @@
     <comment pinned="false" h="80" w="160">Tests the "find" block with a function call.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
         <value name="VALUE">
           <block type="math_number">
             <field name="NUM">0</field>
@@ -755,7 +763,7 @@
                 </value>
                 <next>
                   <block type="variables_set">
-                    <field name="VAR">number of calls</field>
+                    <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                     <value name="VALUE">
                       <block type="math_number">
                         <field name="NUM">0</field>
@@ -816,7 +824,7 @@
                             </value>
                             <next>
                               <block type="variables_set">
-                                <field name="VAR">number of calls</field>
+                                <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                 <value name="VALUE">
                                   <block type="math_number">
                                     <field name="NUM">0</field>
@@ -865,7 +873,7 @@
                                         </value>
                                         <next>
                                           <block type="variables_set">
-                                            <field name="VAR">number of calls</field>
+                                            <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                             <value name="VALUE">
                                               <block type="math_number">
                                                 <field name="NUM">0</field>
@@ -926,7 +934,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="variables_set">
-                                                        <field name="VAR">number of calls</field>
+                                                        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                         <value name="VALUE">
                                                           <block type="math_number">
                                                             <field name="NUM">0</field>
@@ -975,7 +983,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="variables_set">
-                                                                    <field name="VAR">number of calls</field>
+                                                                    <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                     <value name="VALUE">
                                                                       <block type="math_number">
                                                                         <field name="NUM">0</field>
@@ -1076,7 +1084,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get" block with a variable.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -1111,7 +1119,7 @@
                 <field name="WHERE">FIRST</field>
                 <value name="VALUE">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
               </block>
@@ -1135,7 +1143,7 @@
                     <field name="WHERE">LAST</field>
                     <value name="VALUE">
                       <block type="variables_get">
-                        <field name="VAR">list</field>
+                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                       </block>
                     </value>
                   </block>
@@ -1161,7 +1169,7 @@
                             <field name="END">FIRST</field>
                             <value name="VALUE">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="FIND">
@@ -1171,7 +1179,7 @@
                                 <field name="WHERE">RANDOM</field>
                                 <value name="VALUE">
                                   <block type="variables_get">
-                                    <field name="VAR">list</field>
+                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                   </block>
                                 </value>
                               </block>
@@ -1203,7 +1211,7 @@
                             <field name="WHERE">FROM_START</field>
                             <value name="VALUE">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="AT">
@@ -1236,7 +1244,7 @@
                                 <field name="WHERE">FROM_START</field>
                                 <value name="VALUE">
                                   <block type="variables_get">
-                                    <field name="VAR">list</field>
+                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                   </block>
                                 </value>
                                 <value name="AT">
@@ -1281,7 +1289,7 @@
                                     <field name="WHERE">FROM_END</field>
                                     <value name="VALUE">
                                       <block type="variables_get">
-                                        <field name="VAR">list</field>
+                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                       </block>
                                     </value>
                                     <value name="AT">
@@ -1315,7 +1323,7 @@
                                         <comment pinned="false" h="81" w="289">The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.</comment>
                                         <value name="VALUE">
                                           <block type="variables_get">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                           </block>
                                         </value>
                                         <value name="AT">
@@ -1344,6 +1352,51 @@
                                         <field name="TEXT">Kirk</field>
                                       </block>
                                     </value>
+                                    <next>
+                                      <block type="unittest_assertequals">
+                                        <value name="MESSAGE">
+                                          <block type="text">
+                                            <field name="TEXT">get # with arithmetic block</field>
+                                          </block>
+                                        </value>
+                                        <value name="ACTUAL">
+                                          <block type="lists_getIndex">
+                                            <mutation statement="false" at="true"></mutation>
+                                            <field name="MODE">GET</field>
+                                            <field name="WHERE">FROM_START</field>
+                                            <value name="VALUE">
+                                              <block type="variables_get">
+                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
+                                              </block>
+                                            </value>
+                                            <value name="AT">
+                                              <block type="unittest_adjustindex">
+                                                <value name="INDEX">
+                                                  <block type="math_arithmetic">
+                                                    <field name="OP">ADD</field>
+                                                    <value name="A">
+                                                      <block type="math_number">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="EXPECTED">
+                                          <block type="text">
+                                            <field name="TEXT">McCoy</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
@@ -1361,7 +1414,7 @@
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" x="13" y="4588">
+  <block type="procedures_defnoreturn" x="47" y="4609">
     <field name="NAME">test get lists create list</field>
     <comment pinned="false" h="80" w="160">Tests the "get" block with create list call.</comment>
     <statement name="STACK">
@@ -1751,7 +1804,7 @@
     <comment pinned="false" h="80" w="160">Creates a list for use with the get test.</comment>
     <statement name="STACK">
       <block type="math_change">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
         <value name="DELTA">
           <block type="math_number">
             <field name="NUM">1</field>
@@ -1785,7 +1838,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get" block with a function call.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -1808,7 +1861,7 @@
         </value>
         <next>
           <block type="variables_set">
-            <field name="VAR">number of calls</field>
+            <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
             <value name="VALUE">
               <block type="math_number">
                 <field name="NUM">0</field>
@@ -1850,7 +1903,7 @@
                     </value>
                     <next>
                       <block type="variables_set">
-                        <field name="VAR">number of calls</field>
+                        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                         <value name="VALUE">
                           <block type="math_number">
                             <field name="NUM">0</field>
@@ -1904,7 +1957,7 @@
                                 </value>
                                 <next>
                                   <block type="variables_set">
-                                    <field name="VAR">number of calls</field>
+                                    <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                     <value name="VALUE">
                                       <block type="math_number">
                                         <field name="NUM">0</field>
@@ -1946,7 +1999,7 @@
                                             </value>
                                             <next>
                                               <block type="variables_set">
-                                                <field name="VAR">number of calls</field>
+                                                <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                 <value name="VALUE">
                                                   <block type="math_number">
                                                     <field name="NUM">0</field>
@@ -2000,7 +2053,7 @@
                                                         </value>
                                                         <next>
                                                           <block type="variables_set">
-                                                            <field name="VAR">number of calls</field>
+                                                            <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                             <value name="VALUE">
                                                               <block type="math_number">
                                                                 <field name="NUM">0</field>
@@ -2022,7 +2075,7 @@
                                                                         <field name="END">FIRST</field>
                                                                         <value name="VALUE">
                                                                           <block type="variables_get">
-                                                                            <field name="VAR">list</field>
+                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                           </block>
                                                                         </value>
                                                                         <value name="FIND">
@@ -2062,7 +2115,7 @@
                                                                     </value>
                                                                     <next>
                                                                       <block type="variables_set">
-                                                                        <field name="VAR">number of calls</field>
+                                                                        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                         <value name="VALUE">
                                                                           <block type="math_number">
                                                                             <field name="NUM">0</field>
@@ -2084,7 +2137,7 @@
                                                                                     <field name="END">FIRST</field>
                                                                                     <value name="VALUE">
                                                                                       <block type="variables_get">
-                                                                                        <field name="VAR">list</field>
+                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <value name="FIND">
@@ -2136,7 +2189,7 @@
                                                                                 </value>
                                                                                 <next>
                                                                                   <block type="variables_set">
-                                                                                    <field name="VAR">number of calls</field>
+                                                                                    <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                     <value name="VALUE">
                                                                                       <block type="math_number">
                                                                                         <field name="NUM">0</field>
@@ -2187,7 +2240,7 @@
                                                                                             </value>
                                                                                             <next>
                                                                                               <block type="variables_set">
-                                                                                                <field name="VAR">number of calls</field>
+                                                                                                <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                 <value name="VALUE">
                                                                                                   <block type="math_number">
                                                                                                     <field name="NUM">0</field>
@@ -2262,7 +2315,7 @@
                                                                                                         </value>
                                                                                                         <next>
                                                                                                           <block type="variables_set">
-                                                                                                            <field name="VAR">number of calls</field>
+                                                                                                            <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                             <value name="VALUE">
                                                                                                               <block type="math_number">
                                                                                                                 <field name="NUM">0</field>
@@ -2313,7 +2366,7 @@
                                                                                                                     </value>
                                                                                                                     <next>
                                                                                                                       <block type="variables_set">
-                                                                                                                        <field name="VAR">number of calls</field>
+                                                                                                                        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                                         <value name="VALUE">
                                                                                                                           <block type="math_number">
                                                                                                                             <field name="NUM">0</field>
@@ -2453,7 +2506,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get and remove" block.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -2488,7 +2541,7 @@
                 <field name="WHERE">FIRST</field>
                 <value name="VALUE">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
               </block>
@@ -2507,7 +2560,7 @@
                 </value>
                 <value name="ACTUAL">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
                 <value name="EXPECTED">
@@ -2527,7 +2580,7 @@
                 </value>
                 <next>
                   <block type="variables_set" inline="false">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                     <value name="VALUE">
                       <block type="lists_create_with" inline="true">
                         <mutation items="3"></mutation>
@@ -2569,7 +2622,7 @@
                                 </value>
                                 <value name="THEN">
                                   <block type="variables_get">
-                                    <field name="VAR">list</field>
+                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                   </block>
                                 </value>
                                 <value name="ELSE">
@@ -2593,7 +2646,7 @@
                             </value>
                             <value name="ACTUAL">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="EXPECTED">
@@ -2613,7 +2666,7 @@
                             </value>
                             <next>
                               <block type="variables_set" inline="false">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                 <value name="VALUE">
                                   <block type="lists_create_with" inline="true">
                                     <mutation items="3"></mutation>
@@ -2648,7 +2701,7 @@
                                         <field name="WHERE">LAST</field>
                                         <value name="VALUE">
                                           <block type="variables_get">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                           </block>
                                         </value>
                                       </block>
@@ -2667,7 +2720,7 @@
                                         </value>
                                         <value name="ACTUAL">
                                           <block type="variables_get">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                           </block>
                                         </value>
                                         <value name="EXPECTED">
@@ -2687,7 +2740,7 @@
                                         </value>
                                         <next>
                                           <block type="variables_set" inline="false">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                             <value name="VALUE">
                                               <block type="lists_create_with" inline="true">
                                                 <mutation items="3"></mutation>
@@ -2729,7 +2782,7 @@
                                                         </value>
                                                         <value name="THEN">
                                                           <block type="variables_get">
-                                                            <field name="VAR">list</field>
+                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                           </block>
                                                         </value>
                                                         <value name="ELSE">
@@ -2753,7 +2806,7 @@
                                                     </value>
                                                     <value name="ACTUAL">
                                                       <block type="variables_get">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                       </block>
                                                     </value>
                                                     <value name="EXPECTED">
@@ -2773,7 +2826,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="variables_set" inline="false">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                         <value name="VALUE">
                                                           <block type="lists_create_with" inline="true">
                                                             <mutation items="3"></mutation>
@@ -2810,7 +2863,7 @@
                                                                     <field name="END">FIRST</field>
                                                                     <value name="VALUE">
                                                                       <block type="variables_get">
-                                                                        <field name="VAR">list</field>
+                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                       </block>
                                                                     </value>
                                                                     <value name="FIND">
@@ -2820,7 +2873,7 @@
                                                                         <field name="WHERE">RANDOM</field>
                                                                         <value name="VALUE">
                                                                           <block type="variables_get">
-                                                                            <field name="VAR">list</field>
+                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                           </block>
                                                                         </value>
                                                                       </block>
@@ -2849,7 +2902,7 @@
                                                                   <block type="lists_length" inline="false">
                                                                     <value name="VALUE">
                                                                       <block type="variables_get">
-                                                                        <field name="VAR">list</field>
+                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                       </block>
                                                                     </value>
                                                                   </block>
@@ -2861,7 +2914,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="variables_set" inline="false">
-                                                                    <field name="VAR">list</field>
+                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                     <value name="VALUE">
                                                                       <block type="lists_create_with" inline="true">
                                                                         <mutation items="3"></mutation>
@@ -2898,7 +2951,7 @@
                                                                                 <field name="END">FIRST</field>
                                                                                 <value name="VALUE">
                                                                                   <block type="variables_get">
-                                                                                    <field name="VAR">list</field>
+                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                   </block>
                                                                                 </value>
                                                                                 <value name="FIND">
@@ -2915,7 +2968,7 @@
                                                                                         </value>
                                                                                         <value name="THEN">
                                                                                           <block type="variables_get">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                           </block>
                                                                                         </value>
                                                                                         <value name="ELSE">
@@ -2949,7 +3002,7 @@
                                                                               <block type="lists_length" inline="false">
                                                                                 <value name="VALUE">
                                                                                   <block type="variables_get">
-                                                                                    <field name="VAR">list</field>
+                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                   </block>
                                                                                 </value>
                                                                               </block>
@@ -2961,7 +3014,7 @@
                                                                             </value>
                                                                             <next>
                                                                               <block type="variables_set" inline="false">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                 <value name="VALUE">
                                                                                   <block type="lists_create_with" inline="true">
                                                                                     <mutation items="3"></mutation>
@@ -2996,7 +3049,7 @@
                                                                                         <field name="WHERE">FROM_START</field>
                                                                                         <value name="VALUE">
                                                                                           <block type="variables_get">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                           </block>
                                                                                         </value>
                                                                                         <value name="AT">
@@ -3024,7 +3077,7 @@
                                                                                         </value>
                                                                                         <value name="ACTUAL">
                                                                                           <block type="variables_get">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                           </block>
                                                                                         </value>
                                                                                         <value name="EXPECTED">
@@ -3044,7 +3097,7 @@
                                                                                         </value>
                                                                                         <next>
                                                                                           <block type="variables_set" inline="false">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                             <value name="VALUE">
                                                                                               <block type="lists_create_with" inline="true">
                                                                                                 <mutation items="3"></mutation>
@@ -3086,7 +3139,7 @@
                                                                                                         </value>
                                                                                                         <value name="THEN">
                                                                                                           <block type="variables_get">
-                                                                                                            <field name="VAR">list</field>
+                                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                           </block>
                                                                                                         </value>
                                                                                                         <value name="ELSE">
@@ -3131,7 +3184,7 @@
                                                                                                     </value>
                                                                                                     <value name="ACTUAL">
                                                                                                       <block type="variables_get">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <value name="EXPECTED">
@@ -3151,7 +3204,7 @@
                                                                                                     </value>
                                                                                                     <next>
                                                                                                       <block type="variables_set" inline="false">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                         <value name="VALUE">
                                                                                                           <block type="lists_create_with" inline="true">
                                                                                                             <mutation items="3"></mutation>
@@ -3186,7 +3239,7 @@
                                                                                                                 <field name="WHERE">FROM_END</field>
                                                                                                                 <value name="VALUE">
                                                                                                                   <block type="variables_get">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                   </block>
                                                                                                                 </value>
                                                                                                                 <value name="AT">
@@ -3214,7 +3267,7 @@
                                                                                                                 </value>
                                                                                                                 <value name="ACTUAL">
                                                                                                                   <block type="variables_get">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                   </block>
                                                                                                                 </value>
                                                                                                                 <value name="EXPECTED">
@@ -3234,7 +3287,7 @@
                                                                                                                 </value>
                                                                                                                 <next>
                                                                                                                   <block type="variables_set" inline="false">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                     <value name="VALUE">
                                                                                                                       <block type="lists_create_with" inline="true">
                                                                                                                         <mutation items="3"></mutation>
@@ -3277,7 +3330,7 @@
                                                                                                                                 </value>
                                                                                                                                 <value name="THEN">
                                                                                                                                   <block type="variables_get">
-                                                                                                                                    <field name="VAR">list</field>
+                                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                                   </block>
                                                                                                                                 </value>
                                                                                                                                 <value name="ELSE">
@@ -3320,7 +3373,7 @@
                                                                                                                             </value>
                                                                                                                             <value name="ACTUAL">
                                                                                                                               <block type="variables_get">
-                                                                                                                                <field name="VAR">list</field>
+                                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                               </block>
                                                                                                                             </value>
                                                                                                                             <value name="EXPECTED">
@@ -3404,7 +3457,7 @@
     <comment pinned="false" h="80" w="160">Tests the "remove" block.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -3432,7 +3485,7 @@
             <field name="WHERE">FIRST</field>
             <value name="VALUE">
               <block type="variables_get">
-                <field name="VAR">list</field>
+                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
               </block>
             </value>
             <next>
@@ -3444,7 +3497,7 @@
                 </value>
                 <value name="ACTUAL">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
                 <value name="EXPECTED">
@@ -3464,7 +3517,7 @@
                 </value>
                 <next>
                   <block type="variables_set" inline="false">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                     <value name="VALUE">
                       <block type="lists_create_with" inline="true">
                         <mutation items="3"></mutation>
@@ -3499,7 +3552,7 @@
                             </value>
                             <value name="THEN">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="ELSE">
@@ -3516,7 +3569,7 @@
                             </value>
                             <value name="ACTUAL">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="EXPECTED">
@@ -3536,7 +3589,7 @@
                             </value>
                             <next>
                               <block type="variables_set" inline="false">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                 <value name="VALUE">
                                   <block type="lists_create_with" inline="true">
                                     <mutation items="3"></mutation>
@@ -3564,7 +3617,7 @@
                                     <field name="WHERE">LAST</field>
                                     <value name="VALUE">
                                       <block type="variables_get">
-                                        <field name="VAR">list</field>
+                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                       </block>
                                     </value>
                                     <next>
@@ -3576,7 +3629,7 @@
                                         </value>
                                         <value name="ACTUAL">
                                           <block type="variables_get">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                           </block>
                                         </value>
                                         <value name="EXPECTED">
@@ -3596,7 +3649,7 @@
                                         </value>
                                         <next>
                                           <block type="variables_set" inline="false">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                             <value name="VALUE">
                                               <block type="lists_create_with" inline="true">
                                                 <mutation items="3"></mutation>
@@ -3631,7 +3684,7 @@
                                                     </value>
                                                     <value name="THEN">
                                                       <block type="variables_get">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                       </block>
                                                     </value>
                                                     <value name="ELSE">
@@ -3648,7 +3701,7 @@
                                                     </value>
                                                     <value name="ACTUAL">
                                                       <block type="variables_get">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                       </block>
                                                     </value>
                                                     <value name="EXPECTED">
@@ -3668,7 +3721,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="variables_set" inline="false">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                         <value name="VALUE">
                                                           <block type="lists_create_with" inline="true">
                                                             <mutation items="3"></mutation>
@@ -3696,7 +3749,7 @@
                                                             <field name="WHERE">RANDOM</field>
                                                             <value name="VALUE">
                                                               <block type="variables_get">
-                                                                <field name="VAR">list</field>
+                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                               </block>
                                                             </value>
                                                             <next>
@@ -3710,7 +3763,7 @@
                                                                   <block type="lists_length" inline="false">
                                                                     <value name="VALUE">
                                                                       <block type="variables_get">
-                                                                        <field name="VAR">list</field>
+                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                       </block>
                                                                     </value>
                                                                   </block>
@@ -3722,7 +3775,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="variables_set" inline="false">
-                                                                    <field name="VAR">list</field>
+                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                     <value name="VALUE">
                                                                       <block type="lists_create_with" inline="true">
                                                                         <mutation items="3"></mutation>
@@ -3757,7 +3810,7 @@
                                                                             </value>
                                                                             <value name="THEN">
                                                                               <block type="variables_get">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                               </block>
                                                                             </value>
                                                                             <value name="ELSE">
@@ -3776,7 +3829,7 @@
                                                                               <block type="lists_length" inline="false">
                                                                                 <value name="VALUE">
                                                                                   <block type="variables_get">
-                                                                                    <field name="VAR">list</field>
+                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                   </block>
                                                                                 </value>
                                                                               </block>
@@ -3788,7 +3841,7 @@
                                                                             </value>
                                                                             <next>
                                                                               <block type="variables_set" inline="false">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                 <value name="VALUE">
                                                                                   <block type="lists_create_with" inline="true">
                                                                                     <mutation items="3"></mutation>
@@ -3816,7 +3869,7 @@
                                                                                     <field name="WHERE">FROM_START</field>
                                                                                     <value name="VALUE">
                                                                                       <block type="variables_get">
-                                                                                        <field name="VAR">list</field>
+                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <value name="AT">
@@ -3837,7 +3890,7 @@
                                                                                         </value>
                                                                                         <value name="ACTUAL">
                                                                                           <block type="variables_get">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                           </block>
                                                                                         </value>
                                                                                         <value name="EXPECTED">
@@ -3857,7 +3910,7 @@
                                                                                         </value>
                                                                                         <next>
                                                                                           <block type="variables_set" inline="false">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                             <value name="VALUE">
                                                                                               <block type="lists_create_with" inline="true">
                                                                                                 <mutation items="3"></mutation>
@@ -3892,7 +3945,7 @@
                                                                                                     </value>
                                                                                                     <value name="THEN">
                                                                                                       <block type="variables_get">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <value name="ELSE">
@@ -3930,7 +3983,7 @@
                                                                                                     </value>
                                                                                                     <value name="ACTUAL">
                                                                                                       <block type="variables_get">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <value name="EXPECTED">
@@ -3950,7 +4003,7 @@
                                                                                                     </value>
                                                                                                     <next>
                                                                                                       <block type="variables_set" inline="false">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                         <value name="VALUE">
                                                                                                           <block type="lists_create_with" inline="true">
                                                                                                             <mutation items="3"></mutation>
@@ -3978,7 +4031,7 @@
                                                                                                             <field name="WHERE">FROM_END</field>
                                                                                                             <value name="VALUE">
                                                                                                               <block type="variables_get">
-                                                                                                                <field name="VAR">list</field>
+                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                               </block>
                                                                                                             </value>
                                                                                                             <value name="AT">
@@ -3999,7 +4052,7 @@
                                                                                                                 </value>
                                                                                                                 <value name="ACTUAL">
                                                                                                                   <block type="variables_get">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                   </block>
                                                                                                                 </value>
                                                                                                                 <value name="EXPECTED">
@@ -4019,7 +4072,7 @@
                                                                                                                 </value>
                                                                                                                 <next>
                                                                                                                   <block type="variables_set" inline="false">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                     <value name="VALUE">
                                                                                                                       <block type="lists_create_with" inline="true">
                                                                                                                         <mutation items="3"></mutation>
@@ -4055,7 +4108,7 @@
                                                                                                                             </value>
                                                                                                                             <value name="THEN">
                                                                                                                               <block type="variables_get">
-                                                                                                                                <field name="VAR">list</field>
+                                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                               </block>
                                                                                                                             </value>
                                                                                                                             <value name="ELSE">
@@ -4091,7 +4144,7 @@
                                                                                                                             </value>
                                                                                                                             <value name="ACTUAL">
                                                                                                                               <block type="variables_get">
-                                                                                                                                <field name="VAR">list</field>
+                                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                               </block>
                                                                                                                             </value>
                                                                                                                             <value name="EXPECTED">
@@ -4175,7 +4228,7 @@
     <comment pinned="false" h="80" w="160">Tests the "set" block.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -4203,7 +4256,7 @@
             <field name="WHERE">FIRST</field>
             <value name="LIST">
               <block type="variables_get">
-                <field name="VAR">list</field>
+                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
               </block>
             </value>
             <value name="TO">
@@ -4220,7 +4273,7 @@
                 </value>
                 <value name="ACTUAL">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
                 <value name="EXPECTED">
@@ -4245,7 +4298,7 @@
                 </value>
                 <next>
                   <block type="variables_set" inline="false">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                     <value name="VALUE">
                       <block type="lists_create_with" inline="true">
                         <mutation items="3"></mutation>
@@ -4280,7 +4333,7 @@
                             </value>
                             <value name="THEN">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="ELSE">
@@ -4302,7 +4355,7 @@
                             </value>
                             <value name="ACTUAL">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="EXPECTED">
@@ -4327,7 +4380,7 @@
                             </value>
                             <next>
                               <block type="variables_set" inline="false">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                 <value name="VALUE">
                                   <block type="lists_create_with" inline="true">
                                     <mutation items="3"></mutation>
@@ -4355,7 +4408,7 @@
                                     <field name="WHERE">LAST</field>
                                     <value name="LIST">
                                       <block type="variables_get">
-                                        <field name="VAR">list</field>
+                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                       </block>
                                     </value>
                                     <value name="TO">
@@ -4372,7 +4425,7 @@
                                         </value>
                                         <value name="ACTUAL">
                                           <block type="variables_get">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                           </block>
                                         </value>
                                         <value name="EXPECTED">
@@ -4397,7 +4450,7 @@
                                         </value>
                                         <next>
                                           <block type="variables_set" inline="false">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                             <value name="VALUE">
                                               <block type="lists_create_with" inline="true">
                                                 <mutation items="3"></mutation>
@@ -4432,7 +4485,7 @@
                                                     </value>
                                                     <value name="THEN">
                                                       <block type="variables_get">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                       </block>
                                                     </value>
                                                     <value name="ELSE">
@@ -4454,7 +4507,7 @@
                                                     </value>
                                                     <value name="ACTUAL">
                                                       <block type="variables_get">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                       </block>
                                                     </value>
                                                     <value name="EXPECTED">
@@ -4479,7 +4532,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="variables_set" inline="false">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                         <value name="VALUE">
                                                           <block type="lists_create_with" inline="true">
                                                             <mutation items="3"></mutation>
@@ -4507,7 +4560,7 @@
                                                             <field name="WHERE">RANDOM</field>
                                                             <value name="LIST">
                                                               <block type="variables_get">
-                                                                <field name="VAR">list</field>
+                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                               </block>
                                                             </value>
                                                             <value name="TO">
@@ -4526,7 +4579,7 @@
                                                                   <block type="lists_length" inline="false">
                                                                     <value name="VALUE">
                                                                       <block type="variables_get">
-                                                                        <field name="VAR">list</field>
+                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                       </block>
                                                                     </value>
                                                                   </block>
@@ -4538,7 +4591,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="variables_set" inline="false">
-                                                                    <field name="VAR">list</field>
+                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                     <value name="VALUE">
                                                                       <block type="lists_create_with" inline="true">
                                                                         <mutation items="3"></mutation>
@@ -4573,7 +4626,7 @@
                                                                             </value>
                                                                             <value name="THEN">
                                                                               <block type="variables_get">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                               </block>
                                                                             </value>
                                                                             <value name="ELSE">
@@ -4597,7 +4650,7 @@
                                                                               <block type="lists_length" inline="false">
                                                                                 <value name="VALUE">
                                                                                   <block type="variables_get">
-                                                                                    <field name="VAR">list</field>
+                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                   </block>
                                                                                 </value>
                                                                               </block>
@@ -4609,7 +4662,7 @@
                                                                             </value>
                                                                             <next>
                                                                               <block type="variables_set" inline="false">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                 <value name="VALUE">
                                                                                   <block type="lists_create_with" inline="true">
                                                                                     <mutation items="3"></mutation>
@@ -4637,7 +4690,7 @@
                                                                                     <field name="WHERE">FROM_START</field>
                                                                                     <value name="LIST">
                                                                                       <block type="variables_get">
-                                                                                        <field name="VAR">list</field>
+                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <value name="AT">
@@ -4663,7 +4716,7 @@
                                                                                         </value>
                                                                                         <value name="ACTUAL">
                                                                                           <block type="variables_get">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                           </block>
                                                                                         </value>
                                                                                         <value name="EXPECTED">
@@ -4688,7 +4741,7 @@
                                                                                         </value>
                                                                                         <next>
                                                                                           <block type="variables_set" inline="false">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                             <value name="VALUE">
                                                                                               <block type="lists_create_with" inline="true">
                                                                                                 <mutation items="3"></mutation>
@@ -4723,7 +4776,7 @@
                                                                                                     </value>
                                                                                                     <value name="THEN">
                                                                                                       <block type="variables_get">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <value name="ELSE">
@@ -4766,7 +4819,7 @@
                                                                                                     </value>
                                                                                                     <value name="ACTUAL">
                                                                                                       <block type="variables_get">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <value name="EXPECTED">
@@ -4791,7 +4844,7 @@
                                                                                                     </value>
                                                                                                     <next>
                                                                                                       <block type="variables_set" inline="false">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                         <value name="VALUE">
                                                                                                           <block type="lists_create_with" inline="true">
                                                                                                             <mutation items="3"></mutation>
@@ -4819,7 +4872,7 @@
                                                                                                             <field name="WHERE">FROM_END</field>
                                                                                                             <value name="LIST">
                                                                                                               <block type="variables_get">
-                                                                                                                <field name="VAR">list</field>
+                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                               </block>
                                                                                                             </value>
                                                                                                             <value name="AT">
@@ -4845,7 +4898,7 @@
                                                                                                                 </value>
                                                                                                                 <value name="ACTUAL">
                                                                                                                   <block type="variables_get">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                   </block>
                                                                                                                 </value>
                                                                                                                 <value name="EXPECTED">
@@ -4870,7 +4923,7 @@
                                                                                                                 </value>
                                                                                                                 <next>
                                                                                                                   <block type="variables_set" inline="false">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                     <value name="VALUE">
                                                                                                                       <block type="lists_create_with" inline="true">
                                                                                                                         <mutation items="3"></mutation>
@@ -4906,7 +4959,7 @@
                                                                                                                             </value>
                                                                                                                             <value name="THEN">
                                                                                                                               <block type="variables_get">
-                                                                                                                                <field name="VAR">list</field>
+                                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                               </block>
                                                                                                                             </value>
                                                                                                                             <value name="ELSE">
@@ -4947,7 +5000,7 @@
                                                                                                                             </value>
                                                                                                                             <value name="ACTUAL">
                                                                                                                               <block type="variables_get">
-                                                                                                                                <field name="VAR">list</field>
+                                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                               </block>
                                                                                                                             </value>
                                                                                                                             <value name="EXPECTED">
@@ -5036,7 +5089,7 @@
     <comment pinned="false" h="80" w="160">Tests the "insert" block.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -5064,7 +5117,7 @@
             <field name="WHERE">FIRST</field>
             <value name="LIST">
               <block type="variables_get">
-                <field name="VAR">list</field>
+                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
               </block>
             </value>
             <value name="TO">
@@ -5081,7 +5134,7 @@
                 </value>
                 <value name="ACTUAL">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
                 <value name="EXPECTED">
@@ -5111,7 +5164,7 @@
                 </value>
                 <next>
                   <block type="variables_set" inline="false">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                     <value name="VALUE">
                       <block type="lists_create_with" inline="true">
                         <mutation items="3"></mutation>
@@ -5146,7 +5199,7 @@
                             </value>
                             <value name="THEN">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="ELSE">
@@ -5168,7 +5221,7 @@
                             </value>
                             <value name="ACTUAL">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="EXPECTED">
@@ -5198,7 +5251,7 @@
                             </value>
                             <next>
                               <block type="variables_set" inline="false">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                 <value name="VALUE">
                                   <block type="lists_create_with" inline="true">
                                     <mutation items="3"></mutation>
@@ -5226,7 +5279,7 @@
                                     <field name="WHERE">LAST</field>
                                     <value name="LIST">
                                       <block type="variables_get">
-                                        <field name="VAR">list</field>
+                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                       </block>
                                     </value>
                                     <value name="TO">
@@ -5243,7 +5296,7 @@
                                         </value>
                                         <value name="ACTUAL">
                                           <block type="variables_get">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                           </block>
                                         </value>
                                         <value name="EXPECTED">
@@ -5273,7 +5326,7 @@
                                         </value>
                                         <next>
                                           <block type="variables_set" inline="false">
-                                            <field name="VAR">list</field>
+                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                             <value name="VALUE">
                                               <block type="lists_create_with" inline="true">
                                                 <mutation items="3"></mutation>
@@ -5308,7 +5361,7 @@
                                                     </value>
                                                     <value name="THEN">
                                                       <block type="variables_get">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                       </block>
                                                     </value>
                                                     <value name="ELSE">
@@ -5330,7 +5383,7 @@
                                                     </value>
                                                     <value name="ACTUAL">
                                                       <block type="variables_get">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                       </block>
                                                     </value>
                                                     <value name="EXPECTED">
@@ -5360,7 +5413,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="variables_set" inline="false">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                         <value name="VALUE">
                                                           <block type="lists_create_with" inline="true">
                                                             <mutation items="3"></mutation>
@@ -5388,7 +5441,7 @@
                                                             <field name="WHERE">RANDOM</field>
                                                             <value name="LIST">
                                                               <block type="variables_get">
-                                                                <field name="VAR">list</field>
+                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                               </block>
                                                             </value>
                                                             <value name="TO">
@@ -5407,7 +5460,7 @@
                                                                   <block type="lists_length" inline="false">
                                                                     <value name="VALUE">
                                                                       <block type="variables_get">
-                                                                        <field name="VAR">list</field>
+                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                       </block>
                                                                     </value>
                                                                   </block>
@@ -5419,7 +5472,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="variables_set" inline="false">
-                                                                    <field name="VAR">list</field>
+                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                     <value name="VALUE">
                                                                       <block type="lists_create_with" inline="true">
                                                                         <mutation items="3"></mutation>
@@ -5454,7 +5507,7 @@
                                                                             </value>
                                                                             <value name="THEN">
                                                                               <block type="variables_get">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                               </block>
                                                                             </value>
                                                                             <value name="ELSE">
@@ -5478,7 +5531,7 @@
                                                                               <block type="lists_length" inline="false">
                                                                                 <value name="VALUE">
                                                                                   <block type="variables_get">
-                                                                                    <field name="VAR">list</field>
+                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                   </block>
                                                                                 </value>
                                                                               </block>
@@ -5490,7 +5543,7 @@
                                                                             </value>
                                                                             <next>
                                                                               <block type="variables_set" inline="false">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                 <value name="VALUE">
                                                                                   <block type="lists_create_with" inline="true">
                                                                                     <mutation items="3"></mutation>
@@ -5518,7 +5571,7 @@
                                                                                     <field name="WHERE">FROM_START</field>
                                                                                     <value name="LIST">
                                                                                       <block type="variables_get">
-                                                                                        <field name="VAR">list</field>
+                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <value name="AT">
@@ -5544,7 +5597,7 @@
                                                                                         </value>
                                                                                         <value name="ACTUAL">
                                                                                           <block type="variables_get">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                           </block>
                                                                                         </value>
                                                                                         <value name="EXPECTED">
@@ -5574,7 +5627,7 @@
                                                                                         </value>
                                                                                         <next>
                                                                                           <block type="variables_set" inline="false">
-                                                                                            <field name="VAR">list</field>
+                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                             <value name="VALUE">
                                                                                               <block type="lists_create_with" inline="true">
                                                                                                 <mutation items="3"></mutation>
@@ -5609,7 +5662,7 @@
                                                                                                     </value>
                                                                                                     <value name="THEN">
                                                                                                       <block type="variables_get">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <value name="ELSE">
@@ -5652,7 +5705,7 @@
                                                                                                     </value>
                                                                                                     <value name="ACTUAL">
                                                                                                       <block type="variables_get">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <value name="EXPECTED">
@@ -5682,7 +5735,7 @@
                                                                                                     </value>
                                                                                                     <next>
                                                                                                       <block type="variables_set" inline="false">
-                                                                                                        <field name="VAR">list</field>
+                                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                         <value name="VALUE">
                                                                                                           <block type="lists_create_with" inline="true">
                                                                                                             <mutation items="3"></mutation>
@@ -5710,7 +5763,7 @@
                                                                                                             <field name="WHERE">FROM_END</field>
                                                                                                             <value name="LIST">
                                                                                                               <block type="variables_get">
-                                                                                                                <field name="VAR">list</field>
+                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                               </block>
                                                                                                             </value>
                                                                                                             <value name="AT">
@@ -5736,7 +5789,7 @@
                                                                                                                 </value>
                                                                                                                 <value name="ACTUAL">
                                                                                                                   <block type="variables_get">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                   </block>
                                                                                                                 </value>
                                                                                                                 <value name="EXPECTED">
@@ -5766,7 +5819,7 @@
                                                                                                                 </value>
                                                                                                                 <next>
                                                                                                                   <block type="variables_set" inline="false">
-                                                                                                                    <field name="VAR">list</field>
+                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                     <value name="VALUE">
                                                                                                                       <block type="lists_create_with" inline="true">
                                                                                                                         <mutation items="3"></mutation>
@@ -5802,7 +5855,7 @@
                                                                                                                             </value>
                                                                                                                             <value name="THEN">
                                                                                                                               <block type="variables_get">
-                                                                                                                                <field name="VAR">list</field>
+                                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                               </block>
                                                                                                                             </value>
                                                                                                                             <value name="ELSE">
@@ -5843,7 +5896,7 @@
                                                                                                                             </value>
                                                                                                                             <value name="ACTUAL">
                                                                                                                               <block type="variables_get">
-                                                                                                                                <field name="VAR">list</field>
+                                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                               </block>
                                                                                                                             </value>
                                                                                                                             <value name="EXPECTED">
@@ -5937,7 +5990,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get sub-list" block with a variable.</comment>
     <statement name="STACK">
       <block type="variables_set" inline="false">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="5"></mutation>
@@ -5982,7 +6035,7 @@
                 <field name="WHERE2">FROM_START</field>
                 <value name="LIST">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
                 <value name="AT1">
@@ -6034,7 +6087,7 @@
                     <field name="WHERE2">FROM_START</field>
                     <value name="LIST">
                       <block type="variables_get">
-                        <field name="VAR">list</field>
+                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                       </block>
                     </value>
                     <value name="AT1">
@@ -6110,7 +6163,7 @@
                         <field name="WHERE2">FROM_END</field>
                         <value name="LIST">
                           <block type="variables_get">
-                            <field name="VAR">list</field>
+                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                           </block>
                         </value>
                         <value name="AT1">
@@ -6163,7 +6216,7 @@
                             <comment pinned="false" h="80" w="265">The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.</comment>
                             <value name="LIST">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <value name="AT1">
@@ -6235,19 +6288,19 @@
                                 <field name="WHERE2">LAST</field>
                                 <value name="LIST">
                                   <block type="variables_get">
-                                    <field name="VAR">list</field>
+                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
                             <value name="EXPECTED">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                             <next>
                               <block type="variables_set">
-                                <field name="VAR">changing list</field>
+                                <field name="VAR" id="dl)LKp.-vUYl8Gp;wRfK">changing list</field>
                                 <value name="VALUE">
                                   <block type="lists_create_with" inline="true">
                                     <mutation items="5"></mutation>
@@ -6280,7 +6333,7 @@
                                 </value>
                                 <next>
                                   <block type="variables_set">
-                                    <field name="VAR">list copy</field>
+                                    <field name="VAR" id="*UbKpjijbrF*38py@1%E">list copy</field>
                                     <value name="VALUE">
                                       <block type="lists_getSublist">
                                         <mutation at1="false" at2="false"></mutation>
@@ -6288,7 +6341,7 @@
                                         <field name="WHERE2">LAST</field>
                                         <value name="LIST">
                                           <block type="variables_get">
-                                            <field name="VAR">changing list</field>
+                                            <field name="VAR" id="dl)LKp.-vUYl8Gp;wRfK">changing list</field>
                                           </block>
                                         </value>
                                       </block>
@@ -6300,7 +6353,7 @@
                                         <field name="WHERE">RANDOM</field>
                                         <value name="VALUE">
                                           <block type="variables_get">
-                                            <field name="VAR">changing list</field>
+                                            <field name="VAR" id="dl)LKp.-vUYl8Gp;wRfK">changing list</field>
                                           </block>
                                         </value>
                                         <next>
@@ -6312,12 +6365,12 @@
                                             </value>
                                             <value name="ACTUAL">
                                               <block type="variables_get">
-                                                <field name="VAR">list copy</field>
+                                                <field name="VAR" id="*UbKpjijbrF*38py@1%E">list copy</field>
                                               </block>
                                             </value>
                                             <value name="EXPECTED">
                                               <block type="variables_get">
-                                                <field name="VAR">list</field>
+                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                               </block>
                                             </value>
                                             <next>
@@ -6334,7 +6387,7 @@
                                                     <field name="WHERE2">FROM_END</field>
                                                     <value name="LIST">
                                                       <block type="variables_get">
-                                                        <field name="VAR">list</field>
+                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                       </block>
                                                     </value>
                                                     <value name="AT1">
@@ -6391,7 +6444,7 @@
                                                         <field name="WHERE2">FROM_START</field>
                                                         <value name="LIST">
                                                           <block type="variables_get">
-                                                            <field name="VAR">list</field>
+                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                           </block>
                                                         </value>
                                                         <value name="AT1">
@@ -6443,7 +6496,7 @@
                                                             <field name="WHERE2">FROM_START</field>
                                                             <value name="LIST">
                                                               <block type="variables_get">
-                                                                <field name="VAR">list</field>
+                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                               </block>
                                                             </value>
                                                             <value name="AT2">
@@ -6496,7 +6549,7 @@
                                                                 <field name="WHERE2">FROM_END</field>
                                                                 <value name="LIST">
                                                                   <block type="variables_get">
-                                                                    <field name="VAR">list</field>
+                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                   </block>
                                                                 </value>
                                                                 <value name="AT2">
@@ -6539,7 +6592,7 @@
                                                                     <field name="WHERE2">LAST</field>
                                                                     <value name="LIST">
                                                                       <block type="variables_get">
-                                                                        <field name="VAR">list</field>
+                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                       </block>
                                                                     </value>
                                                                     <value name="AT1">
@@ -6582,7 +6635,7 @@
                                                                         <field name="WHERE2">LAST</field>
                                                                         <value name="LIST">
                                                                           <block type="variables_get">
-                                                                            <field name="VAR">list</field>
+                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                           </block>
                                                                         </value>
                                                                         <value name="AT1">
@@ -6635,7 +6688,7 @@
                                                                             <field name="WHERE2">FROM_END</field>
                                                                             <value name="LIST">
                                                                               <block type="variables_get">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                               </block>
                                                                             </value>
                                                                             <value name="AT1">
@@ -6660,7 +6713,7 @@
                                                                         </value>
                                                                         <value name="EXPECTED">
                                                                           <block type="variables_get">
-                                                                            <field name="VAR">list</field>
+                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                           </block>
                                                                         </value>
                                                                         <next>
@@ -6677,7 +6730,7 @@
                                                                                 <field name="WHERE2">FROM_START</field>
                                                                                 <value name="LIST">
                                                                                   <block type="variables_get">
-                                                                                    <field name="VAR">list</field>
+                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                   </block>
                                                                                 </value>
                                                                                 <value name="AT1">
@@ -6702,7 +6755,7 @@
                                                                             </value>
                                                                             <value name="EXPECTED">
                                                                               <block type="variables_get">
-                                                                                <field name="VAR">list</field>
+                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                               </block>
                                                                             </value>
                                                                             <next>
@@ -6720,7 +6773,7 @@
                                                                                     <comment pinned="false" h="93" w="347">Checks that the whole list is properly retrieved even if the value for start and end is not a simple number. This is especially important in generators where sublist uses [x:length - y] for # #-end.</comment>
                                                                                     <value name="LIST">
                                                                                       <block type="variables_get">
-                                                                                        <field name="VAR">list</field>
+                                                                                        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <value name="AT1">
@@ -6765,7 +6818,7 @@
                                                                                 </value>
                                                                                 <value name="EXPECTED">
                                                                                   <block type="variables_get">
-                                                                                    <field name="VAR">list</field>
+                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                   </block>
                                                                                 </value>
                                                                               </block>
@@ -6812,7 +6865,7 @@
     <comment pinned="false" h="80" w="160">Creates a list for use with the sublist test.</comment>
     <statement name="STACK">
       <block type="math_change">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
         <value name="DELTA">
           <block type="math_number">
             <field name="NUM">1</field>
@@ -6856,7 +6909,7 @@
     <comment pinned="false" h="80" w="160">Tests the "get sub-list" block with a function call.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">number of calls</field>
+        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
         <value name="VALUE">
           <block type="math_number">
             <field name="NUM">0</field>
@@ -6926,7 +6979,7 @@
                 </value>
                 <next>
                   <block type="variables_set">
-                    <field name="VAR">number of calls</field>
+                    <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                     <value name="VALUE">
                       <block type="math_number">
                         <field name="NUM">0</field>
@@ -7032,7 +7085,7 @@
                             </value>
                             <next>
                               <block type="variables_set">
-                                <field name="VAR">number of calls</field>
+                                <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                 <value name="VALUE">
                                   <block type="math_number">
                                     <field name="NUM">0</field>
@@ -7100,7 +7153,7 @@
                                         </value>
                                         <value name="ACTUAL">
                                           <block type="variables_get">
-                                            <field name="VAR">number of calls</field>
+                                            <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                           </block>
                                         </value>
                                         <value name="EXPECTED">
@@ -7110,7 +7163,7 @@
                                         </value>
                                         <next>
                                           <block type="variables_set">
-                                            <field name="VAR">number of calls</field>
+                                            <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                             <value name="VALUE">
                                               <block type="math_number">
                                                 <field name="NUM">0</field>
@@ -7212,7 +7265,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="variables_set">
-                                                        <field name="VAR">number of calls</field>
+                                                        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                         <value name="VALUE">
                                                           <block type="math_number">
                                                             <field name="NUM">0</field>
@@ -7239,7 +7292,7 @@
                                                             </value>
                                                             <value name="EXPECTED">
                                                               <block type="variables_get">
-                                                                <field name="VAR">list</field>
+                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                               </block>
                                                             </value>
                                                             <next>
@@ -7254,7 +7307,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="variables_set">
-                                                                    <field name="VAR">number of calls</field>
+                                                                    <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                     <value name="VALUE">
                                                                       <block type="math_number">
                                                                         <field name="NUM">0</field>
@@ -7329,7 +7382,7 @@
                                                                             </value>
                                                                             <next>
                                                                               <block type="variables_set">
-                                                                                <field name="VAR">number of calls</field>
+                                                                                <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                 <value name="VALUE">
                                                                                   <block type="math_number">
                                                                                     <field name="NUM">0</field>
@@ -7399,7 +7452,7 @@
                                                                                         </value>
                                                                                         <next>
                                                                                           <block type="variables_set">
-                                                                                            <field name="VAR">number of calls</field>
+                                                                                            <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                             <value name="VALUE">
                                                                                               <block type="math_number">
                                                                                                 <field name="NUM">0</field>
@@ -7470,7 +7523,7 @@
                                                                                                     </value>
                                                                                                     <next>
                                                                                                       <block type="variables_set">
-                                                                                                        <field name="VAR">number of calls</field>
+                                                                                                        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                         <value name="VALUE">
                                                                                                           <block type="math_number">
                                                                                                             <field name="NUM">0</field>
@@ -7531,7 +7584,7 @@
                                                                                                                 </value>
                                                                                                                 <next>
                                                                                                                   <block type="variables_set">
-                                                                                                                    <field name="VAR">number of calls</field>
+                                                                                                                    <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                                     <value name="VALUE">
                                                                                                                       <block type="math_number">
                                                                                                                         <field name="NUM">0</field>
@@ -7592,7 +7645,7 @@
                                                                                                                             </value>
                                                                                                                             <next>
                                                                                                                               <block type="variables_set">
-                                                                                                                                <field name="VAR">number of calls</field>
+                                                                                                                                <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                                                 <value name="VALUE">
                                                                                                                                   <block type="math_number">
                                                                                                                                     <field name="NUM">0</field>
@@ -7663,7 +7716,7 @@
                                                                                                                                         </value>
                                                                                                                                         <next>
                                                                                                                                           <block type="variables_set">
-                                                                                                                                            <field name="VAR">number of calls</field>
+                                                                                                                                            <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                                                             <value name="VALUE">
                                                                                                                                               <block type="math_number">
                                                                                                                                                 <field name="NUM">0</field>
@@ -7708,7 +7761,7 @@
                                                                                                                                                 </value>
                                                                                                                                                 <value name="EXPECTED">
                                                                                                                                                   <block type="variables_get">
-                                                                                                                                                    <field name="VAR">list</field>
+                                                                                                                                                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                                                   </block>
                                                                                                                                                 </value>
                                                                                                                                                 <next>
@@ -7723,7 +7776,7 @@
                                                                                                                                                     </value>
                                                                                                                                                     <next>
                                                                                                                                                       <block type="variables_set">
-                                                                                                                                                        <field name="VAR">number of calls</field>
+                                                                                                                                                        <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                                                                         <value name="VALUE">
                                                                                                                                                           <block type="math_number">
                                                                                                                                                             <field name="NUM">0</field>
@@ -7768,7 +7821,7 @@
                                                                                                                                                             </value>
                                                                                                                                                             <value name="EXPECTED">
                                                                                                                                                               <block type="variables_get">
-                                                                                                                                                                <field name="VAR">list</field>
+                                                                                                                                                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                                                               </block>
                                                                                                                                                             </value>
                                                                                                                                                             <next>
@@ -7783,7 +7836,7 @@
                                                                                                                                                                 </value>
                                                                                                                                                                 <next>
                                                                                                                                                                   <block type="variables_set">
-                                                                                                                                                                    <field name="VAR">number of calls</field>
+                                                                                                                                                                    <field name="VAR" id="w~4N]`?dySw.7o+%NhM;">number of calls</field>
                                                                                                                                                                     <value name="VALUE">
                                                                                                                                                                       <block type="math_number">
                                                                                                                                                                         <field name="NUM">0</field>
@@ -7849,7 +7902,7 @@
                                                                                                                                                                         </value>
                                                                                                                                                                         <value name="EXPECTED">
                                                                                                                                                                           <block type="variables_get">
-                                                                                                                                                                            <field name="VAR">list</field>
+                                                                                                                                                                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                                                                                                                                                                           </block>
                                                                                                                                                                         </value>
                                                                                                                                                                         <next>
@@ -7952,7 +8005,7 @@
     <comment pinned="false" h="80" w="160">Tests the "join" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -7986,7 +8039,7 @@
                 <field name="MODE">JOIN</field>
                 <value name="INPUT">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
                 <value name="DELIM">
@@ -8021,7 +8074,7 @@
                         </value>
                         <value name="THEN">
                           <block type="variables_get">
-                            <field name="VAR">list</field>
+                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                           </block>
                         </value>
                         <value name="ELSE">
@@ -8053,7 +8106,7 @@
     <comment pinned="false" h="80" w="160">Tests the "split" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">text</field>
+        <field name="VAR" id="b2/g_3?r_%b6S_-D1*K4">text</field>
         <value name="VALUE">
           <block type="text">
             <field name="TEXT">Vulcan,Klingon,Borg</field>
@@ -8072,7 +8125,7 @@
                 <field name="MODE">SPLIT</field>
                 <value name="INPUT">
                   <block type="variables_get">
-                    <field name="VAR">text</field>
+                    <field name="VAR" id="b2/g_3?r_%b6S_-D1*K4">text</field>
                   </block>
                 </value>
                 <value name="DELIM">
@@ -8122,7 +8175,7 @@
                         </value>
                         <value name="THEN">
                           <block type="variables_get">
-                            <field name="VAR">text</field>
+                            <field name="VAR" id="b2/g_3?r_%b6S_-D1*K4">text</field>
                           </block>
                         </value>
                         <value name="ELSE">
@@ -8169,7 +8222,7 @@
     <comment pinned="false" h="80" w="160">Tests the "alphabetic sort" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -8203,7 +8256,7 @@
                 <field name="DIRECTION">1</field>
                 <value name="LIST">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
               </block>
@@ -8248,7 +8301,7 @@
                         </value>
                         <value name="THEN">
                           <block type="variables_get">
-                            <field name="VAR">list</field>
+                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                           </block>
                         </value>
                         <value name="ELSE">
@@ -8290,7 +8343,7 @@
     <comment pinned="false" h="80" w="160">Tests the "alphabetic sort ignore case" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -8324,7 +8377,7 @@
                 <field name="DIRECTION">1</field>
                 <value name="LIST">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
               </block>
@@ -8369,7 +8422,7 @@
                         </value>
                         <value name="THEN">
                           <block type="variables_get">
-                            <field name="VAR">list</field>
+                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                           </block>
                         </value>
                         <value name="ELSE">
@@ -8411,7 +8464,7 @@
     <comment pinned="false" h="80" w="160">Tests the "numeric sort" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="3"></mutation>
@@ -8445,7 +8498,7 @@
                 <field name="DIRECTION">-1</field>
                 <value name="LIST">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
               </block>
@@ -8490,7 +8543,7 @@
                         </value>
                         <value name="THEN">
                           <block type="variables_get">
-                            <field name="VAR">list</field>
+                            <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                           </block>
                         </value>
                         <value name="ELSE">
@@ -8532,7 +8585,7 @@
     <comment pinned="false" h="80" w="160">Tests the "list reverse" block.</comment>
     <statement name="STACK">
       <block type="variables_set">
-        <field name="VAR">list</field>
+        <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
         <value name="VALUE">
           <block type="lists_create_with" inline="true">
             <mutation items="4"></mutation>
@@ -8569,7 +8622,7 @@
               <block type="lists_reverse">
                 <value name="LIST">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
               </block>
@@ -8608,7 +8661,7 @@
                 </value>
                 <value name="ACTUAL">
                   <block type="variables_get">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                   </block>
                 </value>
                 <value name="EXPECTED">
@@ -8638,7 +8691,7 @@
                 </value>
                 <next>
                   <block type="variables_set">
-                    <field name="VAR">list</field>
+                    <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                     <value name="VALUE">
                       <block type="lists_create_empty"></block>
                     </value>
@@ -8653,7 +8706,7 @@
                           <block type="lists_reverse">
                             <value name="LIST">
                               <block type="variables_get">
-                                <field name="VAR">list</field>
+                                <field name="VAR" id="q$-D^CbPaCyUC7?MBQdd">list</field>
                               </block>
                             </value>
                           </block>

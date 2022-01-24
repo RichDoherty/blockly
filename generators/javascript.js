@@ -312,8 +312,6 @@ JavaScript.getAdjusted = function(
         at = '-' + at;
       }
     }
-    innerOrder = Math.floor(innerOrder);
-    order = Math.floor(order);
     if (this.areParenthesesNeeded(innerOrder, order)) {
       at = '(' + at + ')';
     }

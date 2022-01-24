@@ -609,6 +609,7 @@ def test_get_text_simple():
   assertEquals(text[-1], 'y', 'get last simple')
   assertEquals(text.find(text_random_letter(text)) + 1 > 0, True, 'get random simple')
   assertEquals(text[2], 'o', 'get # simple')
+  assertEquals(text[int(((1 + 1) + 1) - 1)], 'o', 'get # simple with arithmetic block')
   assertEquals(text[int((3 if True else None) - 1)], 'o', 'get # order simple')
   assertEquals(text[-3], 'k', 'get #-end simple')
   # The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
@@ -889,6 +890,7 @@ def test_get_lists_simple():
   assertEquals(list2[-3], 'Kirk', 'get #-end simple')
   # The order for index for #-end is addition because this will catch errors in generators where most perform the operation ... - index.
   assertEquals(list2[-int(0 + 3)], 'Kirk', 'get #-end order simple')
+  assertEquals(list2[int(((1 + 1) + 1) - 1)], 'McCoy', 'get # with arithmetic block')
 
 # Tests the "get" block with create list call.
 def test_get_lists_create_list():
